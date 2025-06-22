@@ -7,7 +7,7 @@ interface Metric {
   value: number;
   unit: string;
   change: number;
-  icon: React.ElementType;
+  icon: React.FC<any>;
   color: string;
 }
 

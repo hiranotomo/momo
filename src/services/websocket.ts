@@ -56,7 +56,7 @@ class WebSocketService {
     // Simulate experiment stage updates
     setInterval(() => {
       const stages = store.getState().experiments.stages;
-      const runningStage = stages.find(s => s.status === 'running');
+      const runningStage = stages.find(s => s.status === 'in_progress');
       
       if (runningStage && runningStage.progress < 100) {
         store.dispatch(updateStage({

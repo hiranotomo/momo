@@ -8,7 +8,7 @@ interface InteractionDetailsProps {
 }
 
 const InteractionDetails: React.FC<InteractionDetailsProps> = ({ node, onClose }) => {
-  const typeColors = {
+  const typeColors: Record<string, string> = {
     microbe: '#4ade80',
     plant: '#22d3ee',
     metabolite: '#f59e0b'

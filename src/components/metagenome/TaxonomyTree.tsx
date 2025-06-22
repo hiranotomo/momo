@@ -83,7 +83,7 @@ const TaxonomyTree: React.FC<TaxonomyTreeProps> = ({ searchTerm, onSelectTaxon }
       .size([height - margin.top - margin.bottom, width - margin.left - margin.right]);
 
     const root = d3.hierarchy(data);
-    const treeData = treemap(root);
+    const treeData = treemap(root as d3.HierarchyNode<any>);
 
     // Links
     const link = g.selectAll('.link')

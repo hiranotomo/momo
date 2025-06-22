@@ -41,28 +41,28 @@ const Overview: React.FC = () => {
       value: metrics.samplesAnalyzed,
       icon: Microscope,
       trend: 12.5,
-      color: 'primary'
+      color: 'primary' as const
     },
     {
       title: t('overview.metrics.speciesIdentified'),
       value: metrics.speciesIdentified,
       icon: Users,
       trend: 8.3,
-      color: 'secondary'
+      color: 'secondary' as const
     },
     {
       title: t('overview.metrics.interactionsDiscovered'),
       value: metrics.interactionsDiscovered,
       icon: Activity,
       trend: -2.1,
-      color: 'accent'
+      color: 'accent' as const
     },
     {
       title: t('overview.metrics.publications'),
       value: metrics.publicationsSubmitted,
       icon: FileText,
       trend: 0,
-      color: 'success'
+      color: 'success' as const
     }
   ];
 

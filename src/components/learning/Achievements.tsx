@@ -6,7 +6,7 @@ interface Achievement {
   id: string;
   title: string;
   description: string;
-  icon: React.ElementType;
+  icon: React.FC<any>;
   progress: number;
   maxProgress: number;
   unlocked: boolean;
@@ -57,14 +57,14 @@ const Achievements: React.FC = () => {
     }
   ];
 
-  const rarityColors = {
+  const rarityColors: Record<string, string> = {
     common: 'from-gray-400 to-gray-600',
     rare: 'from-blue-400 to-blue-600',
     epic: 'from-purple-400 to-purple-600',
     legendary: 'from-amber-400 to-amber-600'
   };
 
-  const rarityGlow = {
+  const rarityGlow: Record<string, string> = {
     common: '',
     rare: 'shadow-[0_0_20px_rgba(59,130,246,0.5)]',
     epic: 'shadow-[0_0_20px_rgba(147,51,234,0.5)]',
@@ -92,7 +92,7 @@ const Achievements: React.FC = () => {
             <div className={`p-3 bg-white/5 ${achievement.unlocked ? rarityGlow[achievement.rarity] : ''}`}>
               <div className="flex items-start space-x-3">
                 <div className={`p-2 rounded-lg bg-gradient-to-br ${rarityColors[achievement.rarity]}`}>
-                  <achievement.icon className="w-5 h-5 text-white" />
+                  <achievement.icon className={"w-5 h-5 text-white"} />
                 </div>
                 
                 <div className="flex-1">
